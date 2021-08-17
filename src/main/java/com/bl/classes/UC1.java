@@ -10,20 +10,21 @@ public class UC1 {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("Driver is loaded");
-			
+
 		} catch (ClassNotFoundException e1) {
 			System.out.println("Driver is not loaded");
 			e1.printStackTrace();
 		}
-		
+
 		try {
 			Connection connection = DriverManager.getConnection(url, userName, password);
 			System.out.println("Database is connected");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println("data base is not connected");
+			System.out.println("database is not connected");
+
 		}
-		
+
 	}
-	
+
 }
