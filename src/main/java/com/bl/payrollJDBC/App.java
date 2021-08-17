@@ -10,6 +10,7 @@ import com.bl.classes.UC1;
 import com.bl.classes.UC2;
 import com.bl.classes.UC3;
 import com.bl.classes.UC4;
+import com.bl.classes.UC5;
 import com.bl.classes.getConnection;
 
 /**
@@ -21,7 +22,8 @@ public class App {
 	static UC2 uc2 = new UC2();
 	static UC3 uc3 = new UC3();
 	static UC4 uc4 = new UC4();
-	
+	static UC5 uc5 = new UC5();
+
 	static getConnection connection = new getConnection();
 	static final String URL = "jdbc:mysql://localhost:3306/payroll_service";
 	static final String USERNAME = "root";
@@ -33,5 +35,6 @@ public class App {
 		uc2.retriveData(connection.connect());
 		uc3.updateDetail(connection.connect());
 		uc4.updateSalary(connection.connect());
+		uc5.getData(connection.connect());
 	}
 }
